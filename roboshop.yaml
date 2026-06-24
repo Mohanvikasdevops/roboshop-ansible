@@ -31,7 +31,7 @@
   - name: create r53 records
     amazon.aws.route53:
       state: present
-      zone: "{{ 109v.store }}"
+      zone: "{{ domain_name }}"
       record: "{{ item.item }}-{{ env }}.{{ domain_name }}" # mongodb-dev.109v.store
       type: A 
       ttl: 1 
